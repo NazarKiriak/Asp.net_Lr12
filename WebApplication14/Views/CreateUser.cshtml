@@ -1,0 +1,56 @@
+﻿@model  WebApplication14.Models.User
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width" />
+	<title>Форма</title>
+	<link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+	@await Html.PartialAsync("../Header")
+
+	<div class="main">
+	<div class="container">
+
+			<h2>Додати користувача</h2>
+<form asp-action="Create" asp-controller="Home" method="post">
+
+
+
+
+	<div>
+
+		<label asp-for="FirstName">Ім'я</label><br />
+
+				<input type="text" asp-for="FirstName" name="FirstName" />
+
+	</div>
+
+	<div>
+
+		<label asp-for="LastName">Прізвище</label><br />
+
+				<input type="text" asp-for="LastName" name="LastName" />
+
+	</div>
+
+
+	<div>
+
+		<label asp-for="Age">Вік</label><br />
+
+				<input type="number" asp-for="Age" name="Age" />
+
+	</div>
+
+	<div>
+
+					<input type="submit" value="Створити користувача" />
+
+	</div>
+
+</form>
+	</div>
+	</div>
+</body>

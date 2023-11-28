@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication14.Models.Company>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width" />
+	<title>Форма</title>
+	<link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+
+	@await Html.PartialAsync("../Header")
+
+
+	<div class="main">
+		<div class="container">
+			<h2>Список компаній</h2>
+
+
+			<table class="table">
+
+				<tr><th>№</th> <th>Назва</th>  <th>Рік створеня</th>  <th>Тип продукції</th> </tr>
+
+				@foreach (var item in Model)
+
+				{
+
+					<tr>
+						<td>@item.Id</td>
+						<td>@item.Name</td>						
+						<td>@item.FoundationYear</td>
+						<td>@item.ProductionType</td>
+				
+
+
+					</tr>
+
+				}
+
+			</table>
+
+			
+		</div>
+
+
+
+	</div>
+
+</body>

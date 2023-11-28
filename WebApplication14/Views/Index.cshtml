@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication14.Models.User>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width" />
+	<title>Форма</title>
+	<link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+	@await Html.PartialAsync("../Header")
+<div class="main">
+<div class="container">
+<h2>Список користувачів</h2>
+
+
+<table class="table">
+
+				<tr><th>Ім'я</th>  <th>Прізвище</th> <th>Вік</th></tr>
+
+	@foreach (var item in Model)
+
+	{
+
+		<tr>
+
+			<td>@item.FirstName</td>
+			<td>@item.LastName</td>
+			<td>@item.Age</td>
+
+
+		</tr>
+
+	}
+
+</table>
+
+			<form class="standart" action="/Home/Create">
+		<button type="submit" > Додати користувача</button>
+		</form>
+	</div>
+		
+		
+
+</div>
+
+</body>
